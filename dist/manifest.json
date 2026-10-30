@@ -1,0 +1,200 @@
+{
+  "device": "iQOO Z8 / Y100t (PD2314, MT6895/MT6896)",
+  "input": "Root-Unlockless-Images/iqoo-z8/lk/os3-unlockless/lk.bin",
+  "input_sha256": "034d97fac3162fa5f872e39f5e6bf97e9a9a47951eab654016527a4e6d5d2d0b",
+  "input_size": 16777216,
+  "output": "dist/lk.img",
+  "output_sha256": "6aea4c4258ac0f639e1ec2ce103db7b54eb607435173a26fb5f803e8e20a8ddd",
+  "output_size": 16777216,
+  "payload_sha256": "dffbfd1dc7112a54423fd5dce11c335b30e86ad5615816586c83502fd46c37e8",
+  "payload_size": 1744,
+  "payload_offset": 6272,
+  "payload_cave_end": 9216,
+  "lk_old_dsize": 847760,
+  "lk_new_dsize": 847760,
+  "bss_offset": 851968,
+  "patches": [
+    {
+      "desc": "fastboot_register tail -> payload stub",
+      "offset": 33240,
+      "old": "0x17fff284",
+      "new": "0x17ffe5aa"
+    },
+    {
+      "desc": "storage loader #1 -> wrapper",
+      "offset": 53548,
+      "old": "0x94011236",
+      "new": "0x97ffd1df"
+    },
+    {
+      "desc": "storage loader #2 -> wrapper",
+      "offset": 53596,
+      "old": "0x9401122a",
+      "new": "0x97ffd1d3"
+    },
+    {
+      "desc": "dtbo overlay -> hook",
+      "offset": 50160,
+      "old": "0x940198c4",
+      "new": "0x97ffd542"
+    },
+    {
+      "desc": "bootconfig append -> hook",
+      "offset": 52092,
+      "old": "0x97fff896",
+      "new": "0x97ffd3bf"
+    }
+  ],
+  "cert2_signed": true,
+  "part_table": [
+    {
+      "idx": 0,
+      "hdr_off": 0,
+      "data_off": 512,
+      "next_off": 848272,
+      "name": "lk",
+      "dsize": 847760,
+      "naddr": 4294967295,
+      "align": 16,
+      "type": 0,
+      "list_end": 0
+    },
+    {
+      "idx": 1,
+      "hdr_off": 848272,
+      "data_off": 848784,
+      "next_off": 850528,
+      "name": "cert1",
+      "dsize": 1735,
+      "naddr": 305419896,
+      "align": 16,
+      "type": 33554432,
+      "list_end": 0
+    },
+    {
+      "idx": 2,
+      "hdr_off": 850528,
+      "data_off": 851040,
+      "next_off": 852192,
+      "name": "cert2",
+      "dsize": 1139,
+      "naddr": 305419896,
+      "align": 16,
+      "type": 33554434,
+      "list_end": 0
+    },
+    {
+      "idx": 3,
+      "hdr_off": 852192,
+      "data_off": 852704,
+      "next_off": 1477760,
+      "name": "bl2_ext",
+      "dsize": 625048,
+      "naddr": 4294967295,
+      "align": 16,
+      "type": 0,
+      "list_end": 0
+    },
+    {
+      "idx": 4,
+      "hdr_off": 1477760,
+      "data_off": 1478272,
+      "next_off": 1480016,
+      "name": "cert1",
+      "dsize": 1735,
+      "naddr": 305419896,
+      "align": 16,
+      "type": 33554432,
+      "list_end": 0
+    },
+    {
+      "idx": 5,
+      "hdr_off": 1480016,
+      "data_off": 1480528,
+      "next_off": 1481488,
+      "name": "cert2",
+      "dsize": 959,
+      "naddr": 305419896,
+      "align": 16,
+      "type": 33554434,
+      "list_end": 0
+    },
+    {
+      "idx": 6,
+      "hdr_off": 1481488,
+      "data_off": 1482000,
+      "next_off": 2408560,
+      "name": "aee",
+      "dsize": 926560,
+      "naddr": 4294967295,
+      "align": 16,
+      "type": 0,
+      "list_end": 0
+    },
+    {
+      "idx": 7,
+      "hdr_off": 2408560,
+      "data_off": 2409072,
+      "next_off": 2410816,
+      "name": "cert1",
+      "dsize": 1735,
+      "naddr": 305419896,
+      "align": 16,
+      "type": 33554432,
+      "list_end": 0
+    },
+    {
+      "idx": 8,
+      "hdr_off": 2410816,
+      "data_off": 2411328,
+      "next_off": 2412288,
+      "name": "cert2",
+      "dsize": 959,
+      "naddr": 305419896,
+      "align": 16,
+      "type": 33554434,
+      "list_end": 0
+    },
+    {
+      "idx": 9,
+      "hdr_off": 2412288,
+      "data_off": 2412800,
+      "next_off": 2742352,
+      "name": "lk_main_dtb",
+      "dsize": 329552,
+      "naddr": 4294967295,
+      "align": 16,
+      "type": 0,
+      "list_end": 0
+    },
+    {
+      "idx": 10,
+      "hdr_off": 2742352,
+      "data_off": 2742864,
+      "next_off": 2744608,
+      "name": "cert1",
+      "dsize": 1735,
+      "naddr": 305419896,
+      "align": 16,
+      "type": 33554432,
+      "list_end": 0
+    },
+    {
+      "idx": 11,
+      "hdr_off": 2744608,
+      "data_off": 2745120,
+      "next_off": 2746080,
+      "name": "cert2",
+      "dsize": 959,
+      "naddr": 305419896,
+      "align": 16,
+      "type": 33554434,
+      "list_end": 1
+    }
+  ],
+  "notes": [
+    "Generated only; not flashed.",
+    "fastboot host sends 'download:' then 'boot' (no colon).",
+    "Payload logs are printed through LK printf and should reach the LK log/expdb."
+  ]
+}

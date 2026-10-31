@@ -116,6 +116,38 @@ v2 产物已清理；仅保留历史哈希 `984c2f60…a90018`，详见 docs/09�
 - [进度日志 STATUS](STATUS.md)
 - [交接日志 HANDOVER](HANDOVER.md)
 
+## 参考项目
+
+逆向与 UEFI bring-up 过程中参考了以下公开项目。仅作方法参考，仓库不包含
+这些项目的代码、固件或签名材料。
+
+**LK / bootloader**
+
+- [R0rt1z2/kaeru](https://github.com/R0rt1z2/kaeru) — ARMv7 LK 注入框架
+- [R0rt1z2/sprig](https://github.com/R0rt1z2/sprig) — ARMv8 bl2_ext 路线
+- [R0rt1z2/fenrir](https://github.com/R0rt1z2/fenrir) — EL3 漏洞 PoC（已归档）
+- [R0rt1z2/lkpatcher](https://github.com/R0rt1z2/lkpatcher) — LK 容器/证书处理
+- [s0meguy1/kansas-unlock](https://github.com/s0meguy1/kansas-unlock) — 新平台 LK cert 路线
+
+**UEFI / EDK2**
+
+- [CrackerCat/EDK2-Xiaomi-MediaTek-MT6895](https://github.com/CrackerCat/EDK2-Xiaomi-MediaTek-MT6895)
+  — pearl (MT6895) EDK2 平台，本仓库 `iqooz8Pkg` 的基础
+- [stanveyjiang/uefi-camellia](https://github.com/stanveyjiang/uefi-camellia)
+  — MT6833 UEFI 热跳与 handoff 方法
+- [soundrust5/Port-woa-uefi-Xiaomi-14T](https://github.com/soundrust5/Port-woa-uefi-Xiaomi-14T)
+  — MT6897 UEFI/Windows bring-up 参考
+- [linux-mediatek/edk2-mtk](https://github.com/linux-mediatek/edk2-mtk)
+- [WP4Android/edk2-mediatek](https://github.com/WP4Android/edk2-mediatek)
+
+**XNU / iOS**
+
+- [oosexgang/hakios-xnu-kernel](https://github.com/oosexgang/hakios-xnu-kernel)
+- [oosexgang/hakios-mt6768](https://github.com/oosexgang/hakios-mt6768)
+- [oosexgang/hakios-uefi](https://github.com/oosexgang/hakios-uefi)
+- [dipa-studio/ios-sweet](https://github.com/dipa-studio/ios-sweet)
+- [MakrSas/ios-topaz](https://github.com/MakrSas/ios-topaz)
+
 ## 验证
 
 ```bash
